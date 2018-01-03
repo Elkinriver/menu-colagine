@@ -1,0 +1,121 @@
+@font-face {
+ font-family: 'nunito-extrabold';
+  src: url(../font/nunito-extrabold.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'nunito-light';
+  src: url(../font/nunito-light.ttf) format('truetype');
+}
+:root{
+   --color-principal:#2b2f3a;
+   --color-sec:#6d5cae;
+   --color-terc:#00fda4;
+    
+   /*Variable de fuentes */
+   --fuente-body:'nunito-light';
+   --fuente-title:'nunito-extrabold';
+}
+*{ padding:0; margin:0;}
+
+body{
+font-family: var(--fuente-body);
+background-color: #fff;
+box-sizing: border-box;
+}
+::-moz-selection {
+		color: #ffffff;
+		background: var(--color-principal);
+}
+  ::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+  ::-webkit-scrollbar-track {
+	 background-color: rgba(217, 217, 217, 0.1);
+	-webkit-border-radius: 3px;
+}
+  ::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 6px;
+}
+  ::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.container{
+	width: 98%;
+	max-width: 1170px;
+	margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+/*Menu de Navegación*/
+
+header{
+position: fixed;
+left: 0px;
+right: 0px;
+background-color: #fff;
+overflow: hidden;
+height: 5em; 
+}
+nav{
+  width:100%;
+}
+.ico-menu{
+  padding: 1.5em;
+  cursor:pointer;
+  z-index: 33;
+}
+.menu-icono {    
+  width: 1.7rem;
+  height: 0.12rem;
+  margin-top: 24px;
+  background: #2B2F3A;
+  position: absolute;
+  top: 0.9rem;  
+  transition: all 0.2s;
+}
+.menu-icono::before,
+.menu-icono::after {
+  content: "";
+  width: 1.7rem;
+  height: 0.12rem;
+  background: #2B2F3A;
+  position: absolute;
+  top: -0.5rem;
+  transition: all 0.2s;
+}
+.menu-icono::after {top: 0.5rem; width: 1.1rem;}
+
+
+#menu{
+  position: fixed;
+  width:30%;
+  padding-top:7em;
+  font-family: var(--fuente-body);
+  background-color:#f3f5f7;
+  height:100vh;
+  transition: all .6s ease;
+  opacity: 1;
+}
+.menu-off{
+ margin-left:-100%;
+ opacity: 0;
+}
+#menu li{
+  list-style:none;
+  padding:1em;
+  margin-left: 4em;
+}
+#menu a{
+transition: all .6s ease;
+color: #111;
+font-size: 23px;
+text-decoration:none;
+}
+/*Fin de Menu de Navegación*/
+@media (max-width: 480px) {
+    .logo-text{
+        display: none;
+    }
+}
